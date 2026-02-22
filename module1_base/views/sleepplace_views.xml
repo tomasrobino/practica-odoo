@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sleepplace_form" model="ir.ui.view">
+        <field name="name">module1.sleepplace.form</field>
+        <field name="model">module1.sleepplace</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="num_beds"/>
+                        <field name="floor"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_sleepplace_list" model="ir.ui.view">
+        <field name="name">module1.sleepplace.list</field>
+        <field name="model">module1.sleepplace</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="num_beds"/>
+                <field name="floor"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_sleepplace" model="ir.actions.act_window">
+        <field name="name">Sleep Places</field>
+        <field name="res_model">module1.sleepplace</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_sleepplace" name="Sleep Places" parent="menu_module1_root" action="action_sleepplace"/>
+</odoo>

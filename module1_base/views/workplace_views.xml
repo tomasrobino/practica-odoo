@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_workplace_form" model="ir.ui.view">
+        <field name="name">module1.workplace.form</field>
+        <field name="model">module1.workplace</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="address"/>
+                        <field name="capacity"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_workplace_list" model="ir.ui.view">
+        <field name="name">module1.workplace.list</field>
+        <field name="model">module1.workplace</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="address"/>
+                <field name="capacity"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_workplace" model="ir.actions.act_window">
+        <field name="name">Workplaces</field>
+        <field name="res_model">module1.workplace</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_workplace" name="Workplaces" parent="menu_module1_root" action="action_workplace"/>
+</odoo>

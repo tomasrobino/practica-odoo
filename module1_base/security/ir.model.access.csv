@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_module1_base_module1_base,module1_base.module1_base,model_module1_base_module1_base,base.group_user,1,1,1,1
+access_workplace,access_workplace,model_module1_workplace,base.group_user,1,1,1,1
+access_sleepplace,access_sleepplace,model_module1_sleepplace,base.group_user,1,1,1,1
+access_persona,access_persona,model_module1_persona,base.group_user,1,1,1,1
